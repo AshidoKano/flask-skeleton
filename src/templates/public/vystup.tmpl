@@ -1,0 +1,19 @@
+{% from "macros/fields.tmpl" import render_input_field, render_submit %}
+{% extends "shared/layout.tmpl" %}
+
+{% block title %}Vypis{% endblock %}
+
+{% block content %}
+  <h3>Tve vlozene data</h3>
+  <div class="form-group">Vložené data</div>
+    <h4>Zaznam vstupu do tabulky v SQL</h4>
+ <table>
+    {% for n in data %}
+        <tr><td>{{ n.Vojtech }}</td>
+        <td>{{ n.Hahn }}</td>
+        <td>{{ n.Muz }}</td>
+        <td>{{ n.datum_insertu }}</td></tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}
